@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65382091-1580-4A9A-8AF4-2A49408BF674}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tabulator</RootNamespace>
+    <AssemblyName>Tabulator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>T Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.3.0\lib\net451\System.Data.SqlClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CategoriesAndResultsBLL.cs" />
+    <Compile Include="BLL\JudgeBLL.cs" />
+    <Compile Include="BLL\JudgesAndAdminBLL.cs" />
+    <Compile Include="BLL\PathImageBLL.cs" />
+    <Compile Include="BLL\TotalBLL.cs" />
+    <Compile Include="BLL\UpdateCandidateImageBLL.cs" />
+    <Compile Include="BLL\UpdateCandidateNamesBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="DAL\AverageMissPageantDAL.cs" />
+    <Compile Include="DAL\AverageTop5DAL.cs" />
+    <Compile Include="DAL\CategoriesAndResultsDAL.cs" />
+    <Compile Include="DAL\Judge5Top5DAL.cs" />
+    <Compile Include="DAL\Judge5OnStageQuestionsDAL.cs" />
+    <Compile Include="DAL\Judge5ResortWearDAL.cs" />
+    <Compile Include="DAL\Judge5EveningGownDAL.cs" />
+    <Compile Include="DAL\Judge5ProductionNoDAL.cs" />
+    <Compile Include="DAL\Judge5TalentDAL.cs" />
+    <Compile Include="DAL\Judge4Top5DAL.cs" />
+    <Compile Include="DAL\Judge4OnStageQuestionsDAL.cs" />
+    <Compile Include="DAL\Judge4ResortWearDAL.cs" />
+    <Compile Include="DAL\Judge4EveningGownDAL.cs" />
+    <Compile Include="DAL\Judge4ProductionNoDAL.cs" />
+    <Compile Include="DAL\Judge4TalentDAL.cs" />
+    <Compile Include="DAL\Judge3Top5DAL.cs" />
+    <Compile Include="DAL\Judge3OnStageQuestionsDAL.cs" />
+    <Compile Include="DAL\Judge3ResortWearDAL.cs" />
+    <Compile Include="DAL\Judge3EveningGownDAL.cs" />
+    <Compile Include="DAL\Judge3ProductionNoDAL.cs" />
+    <Compile Include="DAL\Judge2Top5DAL.cs" />
+    <Compile Include="DAL\Judge2OnStageQuestionsDAL.cs" />
+    <Compile Include="DAL\Judge2ResortWearDAL.cs" />
+    <Compile Include="DAL\Judge2EveningGownDAL.cs" />
+    <Compile Include="DAL\Judge2ProductionNoDAL.cs" />
+    <Compile Include="DAL\Judge1Top5DAL.cs" />
+    <Compile Include="DAL\Judge1OnStageQuestionsDAL.cs" />
+    <Compile Include="DAL\Judge1ResortWearDAL.cs" />
+    <Compile Include="DAL\Judge1EveningGownDAL.cs" />
+    <Compile Include="DAL\Judge1ProductionNoDAL.cs" />
+    <Compile Include="DAL\Judge1UpdateWelcomeFormImageDAL.cs" />
+    <Compile Include="DAL\Judge1UpdateCandidateImageTop5DAL.cs" />
+    <Compile Include="DAL\Judge1UpdateCandidateImageDAL.cs" />
+    <Compile Include="DAL\Judge1UpdateCandNoAndCandNamesTop5DAL.cs" />
+    <Compile Include="DAL\Judge1UpdateCandidateNamesDAL.cs" />
+    <Compile Include="DAL\Judge1TalentDAL.cs" />
+    <Compile Include="DAL\Judge3TalentDAL.cs" />
+    <Compile Include="DAL\Judge2TalentDAL.cs" />
+    <Compile Include="DAL\JudgesAndAdminDAL.cs" />
+    <Compile Include="DAL\PathImageWelcomeFormDAL.cs" />
+    <Compile Include="DAL\PathImageTop5DAL.cs" />
+    <Compile Include="DAL\PathImageDAL.cs" />
+    <Compile Include="DAL\AverageEveningGownDAL.cs" />
+    <Compile Include="DAL\AverageOnStageQuestionsDAL.cs" />
+    <Compile Include="DAL\AverageProductionNoDAL.cs" />
+    <Compile Include="DAL\AverageResortWearDAL.cs" />
+    <Compile Include="DAL\AverageTalentDAL.cs" />
+    <Compile Include="DAL\PathImageWelcomeTabulatorServer.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="DAL\WelcomeTabulatorServerImageDAL.cs" />
+    <Compile Include="UI\frmAverageMissPageant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAverageMissPageant.Designer.cs">
+      <DependentUpon>frmAverageMissPageant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAverageTop5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAverageTop5.Designer.cs">
+      <DependentUpon>frmAverageTop5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmCreateAccount.Designer.cs">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmForMissPageant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmForMissPageant.Designer.cs">
+      <DependentUpon>frmForMissPageant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmJudge1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmJudge1.Designer.cs">
+      <DependentUpon>frmJudge1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmJudge2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmJudge2.Designer.cs">
+      <DependentUpon>frmJudge2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmJudge3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmJudge3.Designer.cs">
+      <DependentUpon>frmJudge3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmJudge4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmJudge4.Designer.cs">
+      <DependentUpon>frmJudge4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmJudge5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmJudge5.Designer.cs">
+      <DependentUpon>frmJudge5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\frmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmPassword.Designer.cs">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAverageEveningGown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAverageEveningGown.Designer.cs">
+      <DependentUpon>frmAverageEveningGown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAverageOnStageQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAverageOnStageQuestions.Designer.cs">
+      <DependentUpon>frmAverageOnStageQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAverageProductionNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAverageProductionNo.Designer.cs">
+      <DependentUpon>frmAverageProductionNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAverageResortWear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAverageResortWear.Designer.cs">
+      <DependentUpon>frmAverageResortWear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmAverageTalent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmAverageTalent.Designer.cs">
+      <DependentUpon>frmAverageTalent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\frmAverageMissPageant.resx">
+      <DependentUpon>frmAverageMissPageant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAverageTop5.resx">
+      <DependentUpon>frmAverageTop5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmCreateAccount.resx">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmJudge1.resx">
+      <DependentUpon>frmJudge1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmJudge2.resx">
+      <DependentUpon>frmJudge2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmJudge3.resx">
+      <DependentUpon>frmJudge3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmJudge4.resx">
+      <DependentUpon>frmJudge4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmJudge5.resx">
+      <DependentUpon>frmJudge5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\frmPassword.resx">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAverageEveningGown.resx">
+      <DependentUpon>frmAverageEveningGown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAverageOnStageQuestions.resx">
+      <DependentUpon>frmAverageOnStageQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAverageProductionNo.resx">
+      <DependentUpon>frmAverageProductionNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAverageResortWear.resx">
+      <DependentUpon>frmAverageResortWear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmAverageTalent.resx">
+      <DependentUpon>frmAverageTalent.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Candidates\" />
+    <Folder Include="Images\Top5\" />
+    <Folder Include="Images\WelcomeForm\" />
+    <Folder Include="Images\WelcomeTabulatorServer\" />
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="T Logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
